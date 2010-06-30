@@ -1,0 +1,20 @@
+<h1>Editing document</h1>
+
+<% form_for(@document) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :cache %><br />
+    <%= f.text_area :cache %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @document %> |
+<%= link_to 'Back', documents_path %>
